@@ -5,7 +5,7 @@ const tailwind = require('tailwindcss')
 const isProd = process.env.NODE_ENV === 'production'
 
 module.exports = {
-  siteName: 'Akarui',
+  siteName: 'Chris Wood',
   css: {
     loaderOptions: {
       postcss: {

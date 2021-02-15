@@ -17,7 +17,6 @@
   </li>
 </template>
 
-
 <script>
 import AppImage from '@/components/AppImage'
 
@@ -28,7 +27,7 @@ export default {
   },
   computed: {
     projectUrl() {
-      return `/projects/${this.project.slug.current}`
+      return `/projets/${this.project.slug.current}`
     },
   },
   props: {
@@ -37,4 +36,3 @@ export default {
   },
 }
 </script>
-

@@ -1,11 +1,11 @@
 export default {
-  name: 'author',
-  title: 'Author',
+  name: 'service',
+  title: 'Service',
   type: 'document',
   fields: [
     {
-      name: 'name',
-      title: 'Name',
+      name: 'title',
+      title: 'Titre',
       type: 'string',
       validation: (Rule) => Rule.required(),
     },
@@ -14,37 +14,30 @@ export default {
       title: 'Slug',
       type: 'slug',
       options: {
-        source: 'name',
+        source: 'title',
         maxLength: 96,
       },
       validation: (Rule) => Rule.required(),
     },
     {
-      name: 'image',
-      title: 'Image',
+      name: 'mainImage',
+      title: 'Image Principale',
       type: 'image',
       options: {
         hotspot: true,
       },
     },
     {
-      name: 'bio',
-      title: 'Bio',
-      type: 'array',
-      of: [
-        {
-          title: 'Block',
-          type: 'block',
-          styles: [{ title: 'Normal', value: 'normal' }],
-          lists: [],
-        },
-      ],
+      name: 'body',
+      title: 'Body',
+      type: 'blockContent',
     },
   ],
+
   preview: {
     select: {
-      title: 'name',
-      media: 'image',
+      title: 'title',
+      media: 'mainImage',
     },
   },
 }

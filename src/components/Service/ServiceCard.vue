@@ -4,26 +4,26 @@
     :class="{ 'is-large': isLarge }"
   >
     <div class="relative flex flex-auto w-full">
-      <g-link class="block w-full" :to="postUrl">
+      <g-link class="block w-full" :to="serviceUrl">
         <AppImage
           class="aka-card-image relative flex flex-auto w-full"
           image-classes="block w-full h-full object-cover absolute"
-          :main-image="post.mainImage"
+          :main-image="service.mainImage"
           placeholder
         />
       </g-link>
     </div>
     <div class="post-card-content relative flex flex-col p-6 h-full w-full">
-      <div class="post-card-meta font-semibold text-xs leading-tight mb-4">
+      <!-- <div class="post-card-meta font-semibold text-xs leading-tight mb-4">
         <span v-if="post.author"> By: {{ post.author.name }} /</span>
         Posted on: {{ post.publishedAt }}
-      </div>
+      </div> -->
       <g-link
         class="post-card-link inline-flex font-medium text-base px-4 -ml-4"
-        :to="postUrl"
+        :to="serviceUrl"
       >
         <h2 class="post-card-heading font-bold text-lg leading-tight mb-auto">
-          {{ post.title }}
+          {{ service.title }}
         </h2>
       </g-link>
     </div>
@@ -42,12 +42,12 @@ export default {
     isLarge() {
       return this.index % 3 === 0
     },
-    postUrl() {
-      return `/blog/${this.post.slug.current}`
+    serviceUrl() {
+      return `/services/${this.service.slug.current}`
     },
   },
   props: {
-    post: Object,
+    service: Object,
     index: Number,
   },
 }

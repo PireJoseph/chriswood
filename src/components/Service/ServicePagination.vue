@@ -5,8 +5,8 @@
     <div class="post-pagination-item is-prev relative text-sm">
       <g-link
         class="inline-block leading-snug py-2"
-        :to="`/blog/${prev.slug.current}`"
-        :aria-label="`Previous post: ${next.title}`"
+        :to="`/services/${prev.slug.current}`"
+        :aria-label="`Previous service: ${next.title}`"
       >
         <span class="block font-semibold text-tiny leading-loose text-primary"
           >previous</span
@@ -17,8 +17,8 @@
     <div class="post-pagination-item is-next text-right">
       <g-link
         class="inline-block leading-snug py-2"
-        :to="`/blog/${next.slug.current}`"
-        :aria-label="`Next post: ${next.title}`"
+        :to="`/services/${next.slug.current}`"
+        :aria-label="`Next service: ${next.title}`"
       >
         <span class="block font-semibold text-tiny leading-loose text-primary"
           >next</span
@@ -31,7 +31,7 @@
 
 <script>
 export default {
-  name: 'PostPagination',
+  name: 'ServicePagination',
   props: {
     prev: Object,
     next: Object,

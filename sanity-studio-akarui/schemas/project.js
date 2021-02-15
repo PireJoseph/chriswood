@@ -1,11 +1,17 @@
 export default {
   name: 'project',
-  title: 'Project',
+  title: 'Projet',
   type: 'document',
   fields: [
     {
       name: 'title',
       title: 'Title',
+      type: 'string',
+      validation: (Rule) => Rule.required(),
+    },
+    {
+      name: 'description',
+      title: 'Description',
       type: 'string',
       validation: (Rule) => Rule.required(),
     },
@@ -28,14 +34,14 @@ export default {
       },
     },
     {
-      name: 'category',
-      title: 'Category',
-      type: 'reference',
-      to: { type: 'category' },
+      name: 'service',
+      title: 'Services',
+      type: 'array',
+      of: [{ type: 'reference', to: { type: 'service' } }],
     },
     {
       name: 'completed',
-      title: 'Completed on',
+      title: 'Achevé le',
       type: 'datetime',
       validation: (Rule) => Rule.required(),
     },

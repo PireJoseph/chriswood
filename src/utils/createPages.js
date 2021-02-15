@@ -2,7 +2,7 @@ const gql = String.raw
 
 const createPagesQuery = gql`
   {
-    allSanityPost(sortBy: "publishedAt") {
+    allSanityService(sortBy: "title") {
       edges {
         node {
           id

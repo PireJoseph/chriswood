@@ -6,24 +6,27 @@
           <h1
             class="font-black text-3xl leading-tight xl:text-center xl:text-5xl"
           >
-            {{ $page.post.title }}
+            {{ $page.service.title }}
           </h1>
         </header>
         <AppImage
-          v-if="$page.post.mainImage"
+          v-if="$page.service.mainImage"
           class="blog-post-banner mb-8"
-          :main-image="$page.post.mainImage"
+          :main-image="$page.service.mainImage"
         />
 
         <div class="blog-post-content container p-0">
-          <div class="blog-post-meta font-semibold text-sm mb-4 text-gray">
+          <!-- <div class="blog-post-meta font-semibold text-sm mb-4 text-gray">
             <span v-if="$page.post.author"
               >By: {{ $page.post.author.name }} /</span
             >
             Posted on: {{ $page.post.publishedAt }}
-          </div>
-          <BlockContent :blocks="$page.post._rawBody" />
-          <PostPagination :next="$page.nextPost" :prev="$page.prevPost" />
+          </div> -->
+          <BlockContent :blocks="$page.service._rawBody" />
+          <ServicePagination
+            :next="$page.nextService"
+            :prev="$page.prevService"
+          />
         </div>
       </article>
     </div>
@@ -31,14 +34,11 @@
 </template>
 
 <page-query>
-  query Post ($id: ID!, $nextID: ID!, $prevID: ID!) {
+  query Service ($id: ID!, $nextID: ID!, $prevID: ID!) {
 
-    post: sanityPost (id: $id) {
-      author {
-        name
-      }
+    service: sanityService (id: $id) {
+
       title
-      publishedAt(format: "MMMM D, YYYY")
       _rawBody
       mainImage {
         asset {
@@ -49,14 +49,14 @@
       }
     }
 
-    nextPost: sanityPost (id: $nextID) {
+    nextService: sanityService (id: $nextID) {
       slug {
         current
       }
       title
     }
 
-    prevPost: sanityPost (id: $prevID) {
+    prevService: sanityService (id: $prevID) {
       slug {
         current
       }
@@ -68,18 +68,18 @@
 <script>
 import AppImage from '@/components/AppImage'
 import BlockContent from '@/components/BlockContent'
-import PostPagination from '@/components/Blog/PostPagination'
+import ServicePagination from '@/components/Service/ServicePagination'
 
 export default {
   name: 'Post',
   components: {
     AppImage,
     BlockContent,
-    PostPagination,
+    ServicePagination,
   },
   metaInfo() {
     return {
-      title: this.$page.post.title,
+      title: this.$page.service.title,
     }
   },
 }

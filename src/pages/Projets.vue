@@ -54,7 +54,7 @@ export default {
     ProjectList,
   },
   metaInfo: {
-    title: 'Projects',
+    title: 'Projets',
   },
 }
 </script>

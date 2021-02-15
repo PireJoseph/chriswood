@@ -10,17 +10,17 @@
       <slot />
     </div>
     <div class="aka-banner-image hidden md:block">
-      <AppLogo class="block w-full h-auto" />
+      <WorkLogo class="block w-full h-auto" />
     </div>
   </section>
 </template>
 
 <script>
-import AppLogo from '@/assets/images/akarui-logo.svg?inline'
+import WorkLogo from '@/assets/images/undraw_under_construction_46pa.svg?inline'
 
 export default {
   components: {
-    AppLogo,
+    WorkLogo,
   },
   props: {
     heading: String,

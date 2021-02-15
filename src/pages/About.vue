@@ -1,6 +1,6 @@
 <template>
   <Layout>
-    <h1 class="aka-section-heading">About</h1>
+    <h1 class="aka-section-heading">A propos</h1>
     <g-image
       class="mb-10"
       src="@/assets/images/about-banner.jpeg"
@@ -26,7 +26,7 @@
 <script>
 export default {
   metaInfo: {
-    title: 'About',
+    title: 'A propos',
   },
 }
 </script>

@@ -1,8 +1,11 @@
 <template>
   <Layout>
-    <h1 class="aka-section-heading">Blog</h1>
+    <h1 class="aka-section-heading">Services</h1>
     <div class="blog-container">
-      <PostList v-if="$page.posts.edges.length" :posts="$page.posts.edges" />
+      <ServiceList
+        v-if="$page.services.edges.length"
+        :services="$page.services.edges"
+      />
       <div v-else>
         <h3>Nothing here yet...</h3>
       </div>
@@ -10,7 +13,7 @@
         ariaLabel="Blog pagination navigation"
         class="aka-pagination-navigation flex flex-row items-center justify-center py-4 mt-4 w-full"
         linkClass="font-medium mx-2 p-2"
-        :info="$page.posts.pageInfo"
+        :info="$page.services.pageInfo"
       />
     </div>
   </Layout>
@@ -18,7 +21,7 @@
 
 <page-query>
   query ($page: Int){
-    posts: allSanityPost(sortBy: "publishedAt" perPage: 4, page: $page) @paginate {
+    services: allSanityService(sortBy: "title" perPage: 4, page: $page) @paginate {
       pageInfo {
         totalPages
         currentPage
@@ -29,11 +32,7 @@
           slug {
             current
           }
-          author {
-            name
-          }
           title
-          publishedAt(format: "MMMM D, YYYY")
           mainImage {
             asset {
               id
@@ -49,15 +48,15 @@
 
 <script>
 import { Pager } from 'gridsome'
-import PostList from '@/components/Blog/PostList'
+import ServiceList from '@/components/Service/ServiceList'
 
 export default {
   components: {
     Pager,
-    PostList,
+    ServiceList,
   },
   metaInfo: {
-    title: 'Blog',
+    title: 'service',
   },
 }
 </script>

@@ -16,16 +16,20 @@ export default {
     return {
       nav: [
         {
-          label: 'about',
+          label: 'A propos',
           to: '/about',
         },
         {
-          label: 'blog',
-          to: '/blog',
+          label: 'services',
+          to: '/services',
         },
         {
-          label: 'projects',
-          to: '/projects',
+          label: 'projets',
+          to: '/projets',
+        },
+        {
+          label: 'contact',
+          to: '/contact',
         },
       ],
     }
