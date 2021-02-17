@@ -20,7 +20,7 @@
         </div>
       </header>
 
-      <div class="app-slot container mb-8">
+      <div class="app-slot container mb-16">
         <slot />
       </div>
 
