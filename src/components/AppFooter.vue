@@ -27,8 +27,8 @@
           >
             code source
           </a>
-          <g-link to="/sitemap.xml" class="block mt-2">site map</g-link>
-          <g-link to="/robots.txt" class="block mt-2">robots</g-link>
+          <a href="/sitemap.xml" class="block mt-2">site map</a>
+          <a href="/robots.txt" class="block mt-2">robots</a>
         </div>
       </section>
 
