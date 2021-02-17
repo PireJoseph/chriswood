@@ -11,7 +11,7 @@
           <p class="mt-2">
             {{ $static.contactData.edges[0].node.phone }}
           </p>
-          <p class="mt-2">TVA : {{ $static.contactData.edges[0].node.vat }}</p>
+          <p class="mt-2">{{ $static.contactData.edges[0].node.vat }}</p>
         </div>
       </section>
 
@@ -25,24 +25,10 @@
             rel="noreferrer noopener"
             class="block mt-2"
           >
-            Code source
+            code source
           </a>
-          <g-link
-            href="/sitemap.xml"
-            target="blank"
-            rel="noreferrer noopener"
-            class="block mt-2"
-          >
-            Site map
-          </g-link>
-          <g-link
-            href="/robot.txt"
-            target="blank"
-            rel="noreferrer noopener"
-            class="block mt-2"
-          >
-            Robot
-          </g-link>
+          <g-link to="/sitemap.xml" class="block mt-2">site map</g-link>
+          <g-link to="/robot.txt" class="block mt-2">sobots</g-link>
         </div>
       </section>
 
@@ -56,7 +42,7 @@
             rel="noreferrer noopener"
             class="block mt-2"
           >
-            Facebook
+            facebook
           </a>
         </div>
       </section>
