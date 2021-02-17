@@ -4,7 +4,7 @@ const {
   createPagesWithPagination,
 } = require('./src/utils/createPages')
 
-module.exports = function(api) {
+module.exports = function (api) {
   // fix Type with name "SanityDocument" does not exists error
   api.createSchema(({ addSchemaTypes }) => {
     addSchemaTypes(`
@@ -14,7 +14,7 @@ module.exports = function(api) {
     `)
   })
 
-  api.loadSource(store => {
+  api.loadSource((store) => {
     // Use the Data store API here: https://gridsome.org/docs/data-store-api
     store.addMetadata('sanityOptions', dataStore.sanity)
   })
@@ -25,11 +25,10 @@ module.exports = function(api) {
     const allSanityServices = data.allSanityService.edges
     const allSanityProjects = data.allSanityProject.edges
 
-
     createPagesWithPagination({
       edges: allSanityProjects,
       component: './src/templates/Project.vue',
-      path: 'projets',
+      path: 'gallerie',
       createPage,
     })
     createPagesWithPagination({

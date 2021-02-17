@@ -1,23 +1,56 @@
 require('dotenv').config({
   path: '.env',
 })
-const tailwind = require('tailwindcss')
 const isProd = process.env.NODE_ENV === 'production'
 
 module.exports = {
   siteName: 'Chris Wood',
-  css: {
-    loaderOptions: {
-      postcss: {
-        plugins: [tailwind()],
-      },
-    },
-  },
+  siteDescription:
+    'Site de Christopher Crepin, Placards sur mesure, Cuisines, Dressings, Escaliers, Salles de bains, Parquets, Chassis de vois, pvc, alu, Terrasses, bardages',
+  siteUrl: 'https://kind-haibt-874db9.netlify.app',
   plugins: [
+    {
+      use: 'gridsome-plugin-robots-txt',
+      options: {}
+    },
+    {
+      use: '@gridsome/plugin-sitemap',
+      options: {}
+    },
     {
       use: 'gridsome-plugin-svg',
       options: {
         goesBothWays: true,
+      },
+    },
+    {
+      use: 'gridsome-plugin-tailwindcss',
+      options: {
+        tailwindConfig: './tailwind.config.js',
+        purgeConfig: {
+          whitelist: [
+            'svg-inline--fa',
+            'table',
+            'table-striped',
+            'table-bordered',
+            'table-hover',
+            'table-sm',
+          ],
+          whitelistPatterns: [
+            /fa-$/,
+            /blockquote$/,
+            /code$/,
+            /pre$/,
+            /table$/,
+            /table-$/,
+            /dark*/,
+          ],
+        },
+        presetEnvConfig: {},
+        shouldPurge: false,
+        shouldImport: false,
+        shouldTimeTravel: false,
+        shouldPurgeUnusedKeyframes: true,
       },
     },
     {

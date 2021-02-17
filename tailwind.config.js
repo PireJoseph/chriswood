@@ -5,10 +5,13 @@ const remCalc = (value, base = 16) => {
 }
 
 module.exports = {
+  darkMode: 'class',
   purge: {
     mode: 'layers',
-    layers: ['base', 'components', 'utilities'],
     content: ['./src/**/*.html', './src/**/*.vue', './src/**/*.jsx'],
+    options: {
+      whitelist: ['mode-dark'],
+    },
   },
   theme: {
     colors: {
@@ -55,6 +58,12 @@ module.exports = {
       },
     },
   },
-  variants: {},
+  variants: {
+    extend: {
+      backgroundColor: ['dark'],
+      textColor: ['dark'],
+      borderColor: ['dark'],
+    },
+  },
   plugins: [],
 }

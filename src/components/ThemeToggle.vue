@@ -40,6 +40,11 @@ export default {
     setThemeMode() {
       this.saveThemeMode(this.mode)
       document.documentElement.dataset.theme = this.mode
+      if (this.isDark) {
+        document.documentElement.classList.add('dark')
+      } else {
+        document.documentElement.classList.remove('dark')
+      }
     },
     hasInStorage() {
       const mode = localStorage.getItem(LS_MODE)
@@ -68,4 +73,3 @@ export default {
   },
 }
 </script>
-

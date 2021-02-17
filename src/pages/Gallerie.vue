@@ -1,6 +1,6 @@
 <template>
   <Layout>
-    <h1 class="aka-section-heading">Projects</h1>
+    <h1 class="aka-section-heading">Gallerie</h1>
     <ProjectList
       v-if="$page.projects.edges.length"
       :projects="$page.projects.edges"

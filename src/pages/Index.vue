@@ -21,7 +21,7 @@
       <ServiceList :services="$page.services.edges" />
     </section>
     <section v-if="$page.projects.edges.length" class="mx-auto pt-10">
-      <h2 class="font-bold mb-4 text-3xl">Projets</h2>
+      <h2 class="font-bold mb-4 text-3xl">Gallerie</h2>
       <ProjectList :projects="$page.projects.edges" />
     </section>
   </Layout>

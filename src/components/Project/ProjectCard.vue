@@ -27,7 +27,7 @@ export default {
   },
   computed: {
     projectUrl() {
-      return `/projets/${this.project.slug.current}`
+      return `/gallerie/${this.project.slug.current}`
     },
   },
   props: {
