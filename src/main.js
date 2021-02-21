@@ -16,4 +16,11 @@ export default function (Vue, { router, head, isClient }) {
 
   // Inject global image URL builder
   Vue.prototype.$urlForImage = urlForImage
+
+  // Add a meta tag
+  head.meta.push({
+    name: 'keywords',
+    content:
+      'Site de Christopher Crepin, Placards sur mesure, Cuisines, Dressings, Escaliers, Salles de bains, Parquets, Chassis de vois, pvc, alu, Terrasses, bardages',
+  })
 }
