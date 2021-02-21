@@ -1,32 +1,46 @@
 <template>
   <Layout>
-    <h1 class="aka-section-heading">A propos</h1>
-    <g-image
-      class="mb-10"
-      src="@/assets/images/about-banner.jpeg"
-      alt="Lit latern in a dark alley"
-      quality="80"
-      width="1600"
-    />
-
-    <p>
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus sit amet
-      leo ut magna sagittis iaculis. Sed sed ipsum volutpat, congue tortor a,
-      eleifend dui. Aliquam fringilla viverra facilisis. Maecenas in risus
-      libero. Pellentesque vel lorem pretium arcu tempus iaculis. Integer
-      tristique arcu eu magna rhoncus, non laoreet sem elementum. Donec leo
-      ante, volutpat eu eleifend id, vulputate sit amet lorem. Nunc tempor sem
-      non diam gravida mattis. Nullam nec dui in arcu ultrices placerat vitae
-      nec tellus. Sed lacinia justo tincidunt orci interdum, sit amet fermentum
-      odio tristique.
-    </p>
+    <div class="aka-project">
+      <header>
+        <h1 class="font-black leading-loose text-4xl mt-16 mb-10">A propos</h1>
+      </header>
+      <AppImage
+        v-if="$page.allSanityAbout.edges[0].node.mainImage"
+        class="project-banner"
+        :main-image="$page.allSanityAbout.edges[0].node.mainImage"
+      />
+      <div class="project-content container mt-10 px-0">
+        <BlockContent :blocks="$page.allSanityAbout.edges[0].node._rawBody" />
+      </div>
+    </div>
   </Layout>
 </template>
 
+<page-query>
+  query {
+	  allSanityAbout {edges {node {
+      _rawBody,  
+      mainImage {
+        asset {
+          id
+          localFile(width: 1400, quality: 80)
+          url
+        }
+      }}}}	
+  }
+</page-query>
+
 <script>
+import AppImage from '@/components/AppImage'
+import BlockContent from '@/components/BlockContent'
+
 export default {
   metaInfo: {
     title: 'A propos',
+  },
+  components: {
+    AppImage,
+    BlockContent,
   },
 }
 </script>

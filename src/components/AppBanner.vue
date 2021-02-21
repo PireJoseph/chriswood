@@ -10,21 +10,26 @@
       <slot />
     </div>
     <div class="aka-banner-image hidden md:block">
-      <WorkLogo class="block w-full h-auto" />
+      <AppImage
+        v-if="mainImage"
+        class="block w-full h-auto"
+        :main-image="mainImage"
+      />
     </div>
   </section>
 </template>
 
 <script>
-import WorkLogo from '@/assets/images/undraw_under_construction_46pa.svg?inline'
+import AppImage from '@/components/AppImage'
 
 export default {
   components: {
-    WorkLogo,
+    AppImage,
   },
   props: {
     heading: String,
     subheading: String,
+    mainImage: Object,
   },
 }
 </script>

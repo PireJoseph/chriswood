@@ -1,8 +1,9 @@
 <template>
   <Layout>
     <AppBanner
-      heading="Chris Wood"
-      subheading="Menuiseries intérieures et extérieures"
+      :heading="$page.allSanityIndex.edges[0].node.title"
+      :subheading="$page.allSanityIndex.edges[0].node.subtitle"
+      :main-image="$page.allSanityIndex.edges[0].node.mainImage"
     >
       <p class="p-sm">
         Placards sur mesure, Cuisines, Dressings, Escaliers, Salles de bain,
@@ -65,16 +66,33 @@
         }
       }
     }
+    allSanityIndex {
+      edges {
+        node {
+          title, 
+          subtitle, 
+          mainImage {
+            asset {
+              id
+              localFile(width: 1400, quality: 80)
+              url
+            }
+          }
+        }
+      }
+    }	
   }
 </page-query>
 
 <script>
+import AppImage from '@/components/AppImage'
 import AppBanner from '@/components/AppBanner'
 import ProjectList from '@/components/Project/ProjectList'
 import ServiceList from '@/components/Service/ServiceList'
 
 export default {
   components: {
+    AppImage,
     AppBanner,
     ServiceList,
     ProjectList,
