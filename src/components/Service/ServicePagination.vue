@@ -6,10 +6,10 @@
       <g-link
         class="inline-block leading-snug py-2"
         :to="`/services/${prev.slug.current}`"
-        :aria-label="`Previous service: ${next.title}`"
+        :aria-label="`Service précédent : ${next.title}`"
       >
         <span class="block font-semibold text-tiny leading-loose text-primary"
-          >previous</span
+          >précédent</span
         >
         {{ prev.title }}
       </g-link>
@@ -18,10 +18,10 @@
       <g-link
         class="inline-block leading-snug py-2"
         :to="`/services/${next.slug.current}`"
-        :aria-label="`Next service: ${next.title}`"
+        :aria-label="`Service suivant: ${next.title}`"
       >
         <span class="block font-semibold text-tiny leading-loose text-primary"
-          >next</span
+          >suivant</span
         >
         {{ next.title }}
       </g-link>
