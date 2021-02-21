@@ -1,15 +1,13 @@
 <template>
   <Layout>
     <div class="aka-project">
-      <header>
-        <h1 class="font-black leading-loose text-4xl mt-16 mb-10">A propos</h1>
-      </header>
+      <h1 class="aka-section-heading">A propos</h1>
       <AppImage
         v-if="$page.allSanityAbout.edges[0].node.mainImage"
-        class="project-banner"
+        class="project-banner mx-auto hidden md:block max-w-xs"
         :main-image="$page.allSanityAbout.edges[0].node.mainImage"
       />
-      <div class="project-content container mt-10 px-0">
+      <div class="project-content container mt-16 px-0">
         <BlockContent :blocks="$page.allSanityAbout.edges[0].node._rawBody" />
       </div>
     </div>
