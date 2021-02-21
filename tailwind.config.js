@@ -62,7 +62,10 @@ module.exports = {
     extend: {
       backgroundColor: ['dark'],
       textColor: ['dark'],
-      borderColor: ['dark'],
+      borderColor: ['dark', 'hover'],
+      borderWidth: ['hover'],
+      borderStyle: ['hover'],
+      borderOpacity: ['hover'],
     },
   },
   plugins: [],

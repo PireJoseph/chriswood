@@ -6,15 +6,15 @@
       :main-image="$page.allSanityIndex.edges[0].node.mainImage"
     >
       <p class="p-sm">
-        Placards sur mesure, Cuisines, Dressings, Escaliers, Salles de bain,
-        <a
-          class="inline-flex border-b-4 border-primary leading-tight"
-          href="https://fabrx.co/brightkit/"
-          target="_blank"
-          rel="noopener noreferrer"
-          >Parquets</a
+        <g-link
+          v-for="(service, key) in $page.allSanityService.edges"
+          :key="key"
+          :to="'/services/' + service.node.slug.current"
+          class="inline-flex border-b-4 border-bg hover:border-primary mr-2"
         >
-        Chassis, Bois, PVC, Alu, Terrasses, Bardages
+          {{ service.node.title
+          }}<span v-if="key + 1 < $page.allSanityService.edges.length">, </span>
+        </g-link>
       </p>
     </AppBanner>
     <section v-if="$page.services.edges.length" class="mx-auto pt-10">
@@ -45,6 +45,16 @@
               url
             }
           }
+        }
+      }
+    }
+    allSanityService {
+      edges {
+        node {
+          slug {
+            current
+          }
+          title
         }
       }
     }
