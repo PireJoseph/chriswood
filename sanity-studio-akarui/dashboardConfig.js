@@ -1,19 +1,15 @@
-require('dotenv').config({
-  path: '../.env',
-})
-
 export default {
   widgets: [
     {
       name: 'netlify',
       options: {
-        title: 'My Netlify deploys',
+        title: 'Gestion des déploiements',
         sites: [
           {
-            title: 'Website',
-            apiId: `${process.env.NETLIFY_API_ID}`,
-            buildHookId: `${process.env.NETLIFY_BUILD_HOOK_ID}`,
-            name: 'build hook from sanity',
+            title: 'Site web',
+            apiId: process.env.NETLIFY_API_ID,
+            buildHookId: process.env.NETLIFY_BUILD_HOOK_ID,
+            name: 'kind-haibt-874db9',
           },
         ],
       },
