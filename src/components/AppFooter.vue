@@ -1,5 +1,5 @@
 <template>
-  <footer class="aka-footer bg-footer mt-auto text-center text-xs text-gray">
+  <footer class="aka-footer bg-footer mt-auto text-center text-sm text-gray">
     <div class="container flex flex-col lg:flex-row justify-between my-8">
       <section class="flex text-left mt-2 lg:w-1/3">
         <div class="lg:w-1/2"></div>
