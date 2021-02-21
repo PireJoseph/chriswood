@@ -16,14 +16,15 @@
     "dotenv": "^8.2.0",
     "fontsource-inter": "^3.0.5",
     "gridsome": "^0.7.23",
+    "gridsome-plugin-pwa": "^0.0.18",
     "gridsome-plugin-robots-txt": "^1.0.2",
     "gridsome-plugin-svg": "^0.0.14",
+    "gridsome-plugin-tailwindcss": "^4.1.1",
     "gridsome-source-sanity": "^1.0.5",
     "postcss": "^8.1.14",
     "sanity-blocks-vue-component": "^0.1.0",
     "tailwindcss": "^2.0.3",
-    "vue-feather-icons": "^5.1.0",
-    "gridsome-plugin-tailwindcss": "^4.1.1"
+    "vue-feather-icons": "^5.1.0"
   },
   "devDependencies": {
     "@vue/cli-plugin-eslint": "^4.5.11",

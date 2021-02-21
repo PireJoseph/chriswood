@@ -10,12 +10,23 @@ module.exports = {
   siteUrl: 'https://kind-haibt-874db9.netlify.app',
   plugins: [
     {
+      use: 'gridsome-plugin-pwa',
+      options: {
+        title: 'Chris Wood',
+        shortName: 'Chris Wood',
+        description:
+          'Site de Christopher Crepin, Placards sur mesure, Cuisines, Dressings, Escaliers, Salles de bains, Parquets, Chassis de vois, pvc, alu, Terrasses, bardages',
+        categories: 'construction, menuiserie, rénovation, bois',
+        lang: 'fr-BE',
+      },
+    },
+    {
       use: 'gridsome-plugin-robots-txt',
-      options: {}
+      options: {},
     },
     {
       use: '@gridsome/plugin-sitemap',
-      options: {}
+      options: {},
     },
     {
       use: 'gridsome-plugin-svg',
