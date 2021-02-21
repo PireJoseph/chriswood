@@ -63,19 +63,19 @@
           method="POST"
           class="w-full md:w-5/6 mt-12 lg:mt-0"
         >
-          <label for="name">Nom :</label>
+          <label for="name">Nom</label>
           <input type="text" name="name" />
 
-          <label for="email">Email :</label>
+          <label for="email">Email</label>
           <input type="email" name="_replyto" />
 
-          <label for="phone">Téléphone :</label>
+          <label for="phone">Téléphone</label>
           <input type="phone" name="telephon" />
 
-          <label for="subject">Sujet :</label>
+          <label for="subject">Sujet</label>
           <input type="text" name="subject" />
 
-          <label for="Message">Message :</label>
+          <label for="Message">Message</label>
           <textarea name="message" rows="10" />
 
           <button
