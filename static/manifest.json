@@ -1,0 +1,48 @@
+{
+    "background_color": "#000000",
+    "icon_path": "./favicon.svg",
+    "name": "Chris Wood",
+    "short_name": "Chris Wood",
+    "theme_color": "#FFFFFF",
+    "lang": "fr",
+    "display": "minimal-ui",
+    "file_name": "manifest.json",
+    "orientation": "any",
+    "scope": "/",
+    "start_url": "/",
+    "dir": "auto",
+    "prefer_related_applications": false,
+    "related_applications": [],
+    "icons": [
+        {
+            "src": "/assets/img/favicon-512.svg",
+            "type": "image/svg+xml",
+            "sizes": "512x512"
+        },
+        {
+            "src": "/assets/img/favicon-192.svg",
+            "type": "image/svg+xml",
+            "sizes": "192x192"
+        },
+        {
+            "src": "/assets/img/favicon-144.svg",
+            "type": "image/svg+xml",
+            "sizes": "144x144"
+        },
+        {
+            "src": "/assets/img/favicon-96.svg",
+            "type": "image/svg+xml",
+            "sizes": "96x96"
+        },
+        {
+            "src": "/assets/img/favicon-72.svg",
+            "type": "image/svg+xml",
+            "sizes": "72x72"
+        },
+        {
+            "src": "/assets/img/favicon-48.svg",
+            "type": "image/svg+xml",
+            "sizes": "48x48"
+        }
+    ]
+}

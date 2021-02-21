@@ -12,8 +12,20 @@ module.exports = {
     {
       use: 'gridsome-plugin-pwa',
       options: {
+        // Service Worker Options
+        disableServiceWorker: true,
+        disableTemplatedUrls: true,
+        cachedFileTypes: 'js,json,css,html,png,jpg,jpeg,svg,gif',
+        manifestPath: 'manifest.json',
+
         title: 'Chris Wood',
         shortName: 'Chris Wood',
+        startUrl: '/',
+        display: 'standalone',
+        statusBarStyle: 'default',
+        themeColor: '#666600',
+        backgroundColor: '#ffffff',
+        icon: './favicon.svg',
         description:
           'Site de Christopher Crepin, Placards sur mesure, Cuisines, Dressings, Escaliers, Salles de bains, Parquets, Chassis de vois, pvc, alu, Terrasses, bardages',
         categories: 'construction, menuiserie, rénovation, bois',
