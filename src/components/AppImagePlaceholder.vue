@@ -1,6 +1,10 @@
 <template>
   <div class="bg-primary flex flex-col items-center justify-center">
-    <ImagePlaceholder class="w-20 lg:w-40 fill-current" />
+    <ImagePlaceholder
+      class="w-20 lg:w-40 fill-current"
+      title="image fallback"
+      alt="image fallback"
+    />
   </div>
 </template>
 
