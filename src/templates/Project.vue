@@ -10,6 +10,7 @@
         v-if="$page.project.mainImage"
         class="project-banner"
         :main-image="$page.project.mainImage"
+        :title="$page.project.title"
       />
 
       <div class="project-content container mt-10 px-0">

@@ -4,11 +4,15 @@
       v-if="hasLocalImage"
       :class="imageClasses"
       :src="mainImage.asset.localFile"
+      :title="title"
+      :alt="title"
     />
     <img
       v-else-if="remoteSanityImage"
       :class="imageClasses"
       :src="remoteSanityImage"
+      :title="title"
+      :alt="title"
     />
     <AppImagePlaceholder
       v-else-if="placeholder"
@@ -56,6 +60,10 @@ export default {
   },
   props: {
     mainImage: Object,
+    title: {
+      type: String,
+      default: 'image',
+    },
     imageClasses: String,
     useLocalImage: {
       type: Boolean,

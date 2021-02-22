@@ -6,6 +6,7 @@
         v-if="$page.allSanityAbout.edges[0].node.mainImage"
         class="project-banner mx-auto hidden md:block max-w-xs opacity-75"
         :main-image="$page.allSanityAbout.edges[0].node.mainImage"
+        title="A propos"
       />
       <div class="project-content container mt-16 px-0">
         <BlockContent :blocks="$page.allSanityAbout.edges[0].node._rawBody" />

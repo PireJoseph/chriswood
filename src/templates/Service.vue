@@ -13,15 +13,10 @@
           v-if="$page.service.mainImage"
           class="blog-post-banner mb-8"
           :main-image="$page.service.mainImage"
+          :title="$page.service.title"
         />
 
         <div class="blog-post-content container p-0">
-          <!-- <div class="blog-post-meta font-semibold text-sm mb-4 text-gray">
-            <span v-if="$page.post.author"
-              >By: {{ $page.post.author.name }} /</span
-            >
-            Posted on: {{ $page.post.publishedAt }}
-          </div> -->
           <BlockContent :blocks="$page.service._rawBody" />
           <ServicePagination
             :next="$page.nextService"

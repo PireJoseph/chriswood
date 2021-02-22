@@ -6,6 +6,7 @@
         image-classes="block w-full h-full object-cover absolute"
         :main-image="project.mainImage"
         placeholder
+        :title="project.title"
       />
 
       <h2
