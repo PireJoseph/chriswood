@@ -26,6 +26,15 @@ export default {
       validation: (Rule) => Rule.required(),
     },
     {
+      name: 'order',
+      title: 'Ordre',
+      type: 'number',
+      options: {
+        required: true,
+        integer: true,
+      },
+    },
+    {
       name: 'mainImage',
       title: 'Image principale',
       type: 'image',
