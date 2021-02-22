@@ -37,6 +37,15 @@ module.exports = {
       },
     },
     {
+      use: 'gridsome-plugin-service-worker',
+      options: {
+        networkFirst: {
+          routes: ['/', '/services', '/projets', 'contact'],
+          fileTypes: ['document', 'script', 'style', 'image'],
+        },
+      },
+    },
+    {
       use: 'gridsome-plugin-robots-txt',
       options: {},
     },
