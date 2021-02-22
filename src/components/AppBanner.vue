@@ -14,7 +14,7 @@
     >
       <AppImage
         v-if="mainImage"
-        class="block w-full h-auto"
+        class="block w-full h-auto opacity-75"
         :main-image="mainImage"
       />
     </div>

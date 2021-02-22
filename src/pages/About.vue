@@ -4,7 +4,7 @@
       <h1 class="aka-section-heading">A propos</h1>
       <AppImage
         v-if="$page.allSanityAbout.edges[0].node.mainImage"
-        class="project-banner mx-auto hidden md:block max-w-xs"
+        class="project-banner mx-auto hidden md:block max-w-xs opacity-75"
         :main-image="$page.allSanityAbout.edges[0].node.mainImage"
       />
       <div class="project-content container mt-16 px-0">
