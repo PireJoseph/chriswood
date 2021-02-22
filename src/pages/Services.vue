@@ -21,7 +21,7 @@
 
 <page-query>
   query ($page: Int){
-    services: allSanityService(sortBy: "title" perPage: 4, page: $page) @paginate {
+    services: allSanityService(sortBy: "order", order: ASC, perPage: 4, page: $page) @paginate {
       pageInfo {
         totalPages
         currentPage

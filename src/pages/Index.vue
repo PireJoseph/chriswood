@@ -30,7 +30,7 @@
 
 <page-query>
   query{
-    services: allSanityService (sortBy: "title" limit: 3) {
+    services: allSanityService (sortBy: "order", order: ASC, limit: 3) {
       edges {
         node {
           id
@@ -48,7 +48,7 @@
         }
       }
     }
-    allSanityService {
+    allSanityService(sortBy: "order", order: ASC) {
       edges {
         node {
           slug {
