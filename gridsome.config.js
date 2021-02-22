@@ -8,16 +8,18 @@ module.exports = {
   siteDescription:
     'Site de Christopher Crepin, Placards sur mesure, Cuisines, Dressings, Escaliers, Salles de bains, Parquets, Chassis de vois, pvc, alu, Terrasses, bardages',
   siteUrl: 'https://kind-haibt-874db9.netlify.app',
+  icon: './favicon.svg',
   plugins: [
     {
       use: 'gridsome-plugin-pwa',
       options: {
         // Service Worker Options
-        disableServiceWorker: true,
-        disableTemplatedUrls: true,
+        disableServiceWorker: false,
+        serviceWorkerPath: 'service-worker.js',
         cachedFileTypes: 'js,json,css,html,png,jpg,jpeg,svg,gif',
-        manifestPath: 'manifest.json',
 
+        // Manifest Options (https://developer.mozilla.org/en-US/docs/Web/Manifest)
+        manifestPath: 'manifest.json',
         title: 'Chris Wood',
         shortName: 'Chris Wood',
         startUrl: '/',
@@ -29,6 +31,8 @@ module.exports = {
         description:
           'Site de Christopher Crepin, Placards sur mesure, Cuisines, Dressings, Escaliers, Salles de bains, Parquets, Chassis de vois, pvc, alu, Terrasses, bardages',
         categories: 'construction, menuiserie, rénovation, bois',
+        maskableIcon: true,
+        dir: 'auto',
         lang: 'fr-BE',
       },
     },
