@@ -7,13 +7,16 @@
         <div class="lg:w-1/2"></div>
         <div class="lg:w-1/2">
           <h2 class="dark:text-white font-bold mb-4">Contact</h2>
-          <p class="mt-2">
+          <a
+            :href="'mailto:' + $static.contactData.edges[0].node.email"
+            class="footer-link"
+          >
             {{ $static.contactData.edges[0].node.email }}
-          </p>
-          <p class="mt-2">
+          </a>
+          <p class="footer-link">
             {{ $static.contactData.edges[0].node.phone }}
           </p>
-          <p class="mt-2">{{ $static.contactData.edges[0].node.vat }}</p>
+          <p class="footer-link">{{ $static.contactData.edges[0].node.vat }}</p>
         </div>
       </section>
 
@@ -25,12 +28,12 @@
             href="https://github.com/PireJoseph/chriswood"
             target="blank"
             rel="noreferrer noopener"
-            class="block mt-2"
+            class="footer-link"
           >
             code source
           </a>
-          <a href="/sitemap.xml" class="block mt-2">site map</a>
-          <a href="/robots.txt" class="block mt-2">robots</a>
+          <a href="/sitemap.xml" class="footer-link">site map</a>
+          <a href="/robots.txt" class="footer-link">robots</a>
         </div>
       </section>
 
@@ -42,7 +45,7 @@
             :href="$static.contactData.edges[0].node.facebook_adress"
             target="blank"
             rel="noreferrer noopener"
-            class="block mt-2"
+            class="footer-link"
           >
             facebook
           </a>
@@ -77,3 +80,9 @@ export default {
   },
 }
 </script>
+
+<style scoped>
+.footer-link {
+  @apply block mt-2 mr-2 h-12;
+}
+</style>

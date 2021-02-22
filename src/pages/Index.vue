@@ -5,12 +5,12 @@
       :subheading="$page.allSanityIndex.edges[0].node.subtitle"
       :main-image="$page.allSanityIndex.edges[0].node.mainImage"
     >
-      <p class="p-sm">
+      <p class="p-sm mt-4">
         <g-link
           v-for="(service, key) in $page.allSanityService.edges"
           :key="key"
           :to="'/services/' + service.node.slug.current"
-          class="inline-flex border-b-4 border-bg hover:border-primary mr-2"
+          class="inline-flex border-b-4 border-bg hover:border-primary mt-2 mr-2 h-12 md:h-auto md:mt-1"
         >
           {{ service.node.title
           }}<span v-if="key + 1 < $page.allSanityService.edges.length">, </span>

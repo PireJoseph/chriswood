@@ -4,7 +4,7 @@
       <header class="flex items-center mb-6 h-20">
         <div class="container flex items-center justify-between">
           <div class="app-logo">
-            <g-link to="/">
+            <g-link to="/" aria-label="accueil">
               <strong class="hidden md:inline-block">{{
                 $static.metadata.siteName
               }}</strong>
