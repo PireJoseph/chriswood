@@ -50,8 +50,10 @@
             <p class="flex items-center">
               {{ $page.contactData.edges[0].node.vat }}
               <span class="inline-flex justify-end w-8 items-center"
-                ><DollarSignIcon size="20" class="inline"
-              /></span>
+                ><span class="contact-logo pl-2 font-bold text-xs"
+                  >TVA</span
+                ></span
+              >
             </p>
           </div>
         </aside>
@@ -124,7 +126,8 @@ input,
 textarea {
   @apply block w-full mb-4 rounded bg-footer;
 }
-svg {
+svg,
+.contact-logo {
   @apply text-primary dark:text-secondary;
 }
 </style>

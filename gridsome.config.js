@@ -4,7 +4,7 @@ require('dotenv').config({
 const isProd = process.env.NODE_ENV === 'production'
 
 module.exports = {
-  siteName: 'Chris Wood',
+  siteName: 'ChrisWood',
   siteDescription:
     'Site de Christopher Crepin, Placards sur mesure, Cuisines, Dressings, Escaliers, Salles de bains, Parquets, Chassis de vois, pvc, alu, Terrasses, bardages',
   siteUrl: 'https://kind-haibt-874db9.netlify.app',
@@ -20,8 +20,8 @@ module.exports = {
 
         // Manifest Options (https://developer.mozilla.org/en-US/docs/Web/Manifest)
         manifestPath: 'manifest.json',
-        title: 'Chris Wood',
-        shortName: 'Chris Wood',
+        title: 'ChrisWood',
+        shortName: 'ChrisWood',
         startUrl: '/',
         display: 'standalone',
         statusBarStyle: 'default',

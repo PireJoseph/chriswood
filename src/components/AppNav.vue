@@ -10,7 +10,7 @@
           :key="'nav-item-' + item.label"
           class="hidden lg:inline-block"
         >
-          <g-link class="font-semibold lowercase ml-6" :to="item.to">
+          <g-link class="font-semibold ml-6" :to="item.to">
             {{ item.label }}
           </g-link>
         </li>
@@ -28,19 +28,19 @@ export default {
     return {
       nav: [
         {
-          label: 'a propos',
+          label: 'A propos',
           to: '/about',
         },
         {
-          label: 'services',
+          label: 'Services',
           to: '/services',
         },
         {
-          label: 'gallerie',
+          label: 'Gallerie',
           to: '/gallerie',
         },
         {
-          label: 'contact',
+          label: 'Contact',
           to: '/contact',
         },
       ],
